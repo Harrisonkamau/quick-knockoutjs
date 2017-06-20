@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Quick KnockoutJS Tutorial</title>
+
+  <!-- use bootstrap css library -->
+  <link rel="stylesheet" href="css/lib/bootstrap.css">
+
+  <!-- Custom css -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- store our app in a bootstrap container -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6" id="todos">
+        <fieldset>
+          <h3 class="scheduler-border">Todos List <span class="badge" data-bind="text: todos().length"></span></h3>
+          <hr>
+          <div class="form-group">
+            <label for="New Todo">New Todo</label>
+            <input type="text" class="form-control" data-bind="value: newTodo" placeholder="New todo item">
+          </div>
+          <button class="btn btn-success" data-bind="click: addTodo">Create todo</button>
+           <br>
+           <br>
+           
+          <h4>Created todos</h4>
+          <hr>
+          <ul data-bind="foreach: todos">
+            <li data-bind="text: $data"></li>
+          </ul>
+        </fieldset>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  </div>
+
+  <!-- scripts -->
+  <script src="js/lib/jquery-2.1.1.js"></script>
+  <script src="js/lib/bootstrap.min.js"></script>
+  <script src="js/lib/knockout-3.4.2.js"></script>
+  <script src="js/TodoViewModel.js"></script>
+</body>
+
+</html>
